@@ -17,6 +17,7 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.662);
 }
+
 .menu ul {
   display: flex;
   list-style: none;
@@ -50,7 +51,15 @@ body {
   font-size: 20px;
   font-weight: bolder;
 }
-
+#btnAlert{
+  color: white;
+  font-size: 16px;
+}
+#btnAlert:hover{
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
 ul li {
   cursor: pointer;
 }
