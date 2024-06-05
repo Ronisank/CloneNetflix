@@ -53,9 +53,6 @@ controls.forEach((control) => {
 let btnM = document.getElementById("btnModal");
 let ocultoDiv = document.getElementById("atoresDiv");
 
-console.log(btnM);
-console.log(ocultoDiv);
-
 btnM.addEventListener("click", function () {
     if (ocultoDiv.style.display === "block") {
         ocultoDiv.style.display = "none";
