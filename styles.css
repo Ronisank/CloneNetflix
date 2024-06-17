@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-width: 20vw;
 }
 
 .menu ul {
@@ -28,20 +29,19 @@ body {
   text-decoration: none;
   color: white;
 }
-#atoresDiv{
-  display: none;  
-  
+#atoresDiv {
+  display: none;
 }
-#atoresDiv img{  
+#atoresDiv img {
   position: absolute;
   padding-top: 50px;
 }
 
-#btnModal{
+#btnModal {
   color: white;
   font-size: 16px;
 }
-#btnModal:hover{
+#btnModal:hover {
   color: red;
   font-size: 20px;
   font-weight: bolder;
@@ -51,11 +51,11 @@ body {
   font-size: 20px;
   font-weight: bolder;
 }
-#btnAlert{
+#btnAlert {
   color: white;
   font-size: 16px;
 }
-#btnAlert:hover{
+#btnAlert:hover {
   color: red;
   font-size: 20px;
   font-weight: bolder;
@@ -163,4 +163,20 @@ button {
   opacity: 1;
   border: 2px solid rgb(85, 60, 71);
   box-shadow: 0 0 10px 5px rgb(85, 72, 88);
+}
+.item span {
+  padding-left: 10px;
+  padding-top: 80px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.btn-episodio div button {
+  color: rgb(230, 10, 10);
+  font-size: 16px;
+  font-weight: bolder;
+  padding-left: 120px;
+  padding-top: 30px;
+
+
 }

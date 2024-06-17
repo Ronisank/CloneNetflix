@@ -12,19 +12,84 @@ btn.addEventListener("click", function () {
 })
 //! Função para os slides
 
+const episodios = [
+    {
+        id: 1,
+        episodio: 'T1:E01',
+        tempo: '40min',
+        imagem: './imagens/bloodlines.png'
+    },
+    {
+        id: 2,
+        episodio: 'T1:E02',
+        tempo: '40min',
+        img: './imagens/botao-play.png',
+        imagem: './imagens/bugs.png'
+    },
+    {
+        id: 3,
+        episodio: 'T1:E03',
+        tempo: '40min',
+        imagem: './imagens/carry_on.png'
+    },
+    {
+        id: 4,
+        episodio: 'T1:E04',
+        tempo: '40min',
+        imagem: './imagens/scoobynatural.png'
+    },
+    {
+        id: 5,
+        episodio: 'T1:E05',
+        tempo: '40min',
+        imagem: './imagens/something.png'
+    },
+    {
+        id: 6,
+        episodio: 'T1:E06',
+        tempo: '40min',
+        imagem: './imagens/swan_song.png'
+    },
+    {
+        id: 7,
+        episodio: 'T1:E07',
+        tempo: '40min',
+        imagem: './imagens/trocando_de_canal.png'
+    }
+]
+//
+const listaEpisodio = document.getElementById('lista-episodios');
+episodios.forEach(episodio => {
+    const cardEpisodio = document.createElement('div');
+    cardEpisodio.className = 'slide-imgs item current-item btn-episodio';
+    cardEpisodio.innerHTML = `
+    <img src="${episodio.imagem}" alt="Imagem do episódio">
+    <div><button onclick="assistirEpisodio(${episodio.id})">Play</button></div>
+    <span>${episodio.episodio}</span>
+    <span>${episodio.tempo}</span>
+    `
+    listaEpisodio.appendChild(cardEpisodio);
+})
+function assistirEpisodio(id) {
+    const episodio = episodios.find(episodio => episodio.id === id);
+    alert(`Você está assistindo o episódio ${episodio.episodio}`);
+
+}
+
 const controls = document.querySelectorAll('.control');
 
 let currentItem = 0;
 const items = document.querySelectorAll('.item');
 
 const maxItems = items.length;
+console.log(maxItems);
 
 controls.forEach((control) => {
     control.addEventListener("click", (e) => {
         isLeft = e.target.classList.contains("arrow-left");
 
         if (isLeft) {
-            currentItem -= 1;
+            currentItem -= 0;
         } else {
             currentItem += 1;
         }
